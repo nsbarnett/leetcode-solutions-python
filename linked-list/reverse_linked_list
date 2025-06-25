@@ -1,0 +1,66 @@
+"""
+[EASY] Reverse Linked List
+__________________________
+
+Problem: Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+"""
+
+# Definition for singly-linked list.
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def appendNode(self, val):
+        new_node = ListNode(val=val)
+
+        if not self.head:
+            self.head = new_node
+            return 
+        # return ensure the function only creates the head
+        # if no return, current.next = new node, creating a loop (last line of func.).
+
+        current = self.head
+
+        while current.next:
+            current = current.next
+        current.next = new_node
+
+    def printList(self):
+        list = [] # create list for proper output
+        current = self.head
+
+        while current:
+            list.append(current.val)
+            current = current.next
+
+        print(list)
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+    
+
+        
+
+class Solution:
+    def reverseList(self, head):
+        linked_list = LinkedList()
+
+        # only need to reverse input from regular linked list
+        for value in reversed(head):
+            linked_list.appendNode(value)
+
+        linked_list.printList()
+
+        
+
+
+
+test = Solution() # set instance for class Solution
+
+# output test cases for the twoSum method
+test.reverseList( head = [1,2,3,4,5] )
+test.reverseList( head = [1,2] )
+test.reverseList( head = [] )
