@@ -1,0 +1,45 @@
+"""
+[MED] 4Sum
+__________________________
+
+Problem: Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
+
+0 <= a, b, c, d < n
+a, b, c, and d are distinct.
+nums[a] + nums[b] + nums[c] + nums[d] == target
+
+You may return the answer in any order."""
+
+from typing import List
+
+
+class Solution:
+    def fourSum(self, nums: List[int],
+                target: int) -> List[List[int]]:
+
+        nums.sort() # make analysis more predictable
+        quadruplets = set() # ensure no duplicate quads added
+        n = len(nums)
+
+        for i in range(n):
+            for j in range(i+1, n):
+                left, right = j + 1, n - 1 # left and right will always be left of i and j
+                while left < right: # will not enter loop if left goes past right index
+                    total = nums[i] + nums[j] + nums[left] + nums[right]
+                    if total == target:
+                        quad = (nums[i], nums[j], nums[left], nums[right]) # use tuple cause list is not hashable
+                        quadruplets.add(quad)
+                        left += 1
+                        right -= 1
+                    elif total < target: # predictable progression analysis
+                        left += 1
+                    else:
+                        right -= 1
+
+        return [list(quad) for quad in quadruplets] # return proper format
+
+test = Solution() # set instance for class Solution
+
+# output test cases for the twoSum method
+print(test.fourSum( nums=[1,0,-1,0,-2,2], target=0))
+print(test.fourSum( nums=[2,2,2,2,2], target=8))
