@@ -25,7 +25,23 @@ class Solution:
             return False
 
 Example_1 = Solution()
-Example_1.hasDuplicate(nums = [1, 2, 3, 3])
+print(Example_1.hasDuplicate(nums = [1, 2, 3, 3]))
 
 Example_2 = Solution()
-Example_2.hasDuplicate(nums = [1, 2, 3, 4])
+print(Example_2.hasDuplicate(nums = [1, 2, 3, 4]))
+
+"""
+Expected Outcome:
+__________________________
+Example 1:
+
+Input: nums = [1, 2, 3, 3]
+Output: True
+----------
+
+Example 2:
+
+Input: nums = [1, 2, 3, 4]
+Output: False
+
+"""
