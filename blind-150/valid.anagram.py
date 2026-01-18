@@ -17,4 +17,32 @@ class Solution:
             return True
 
         return False
-        
+
+
+
+Example_1 = Solution()
+print(Example_1.isAnagram(s = "racecar", t = "carrace"))
+
+Example_2 = Solution()
+print(Example_2.isAnagram(s = "jar", t = "jam"))
+
+
+"""
+Examples:
+__________________________
+Example 1:
+
+Input: s = "racecar", t = "carrace"
+Output: true
+----------
+
+Example 2:
+
+Input: s = "jar", t = "jam"
+Output: false
+----------
+----------
+Constraints:
+
+s and t consist of lowercase English letters.
+"""

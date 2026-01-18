@@ -21,10 +21,36 @@ class Solution:
                 if i !=j and (val_i+val_j) == target:
                     return [i,j]
 
-solution_1 = Solution()
-solution_2 = Solution()
-solution_3 = Solution()
 
-solution_1.twoSum(nums = [3,4,5,6], target = 7)
-solution_2.twoSum(nums = [4,5,6], target = 10)
-solution_3.twoSum(nums = [5,5], target = 10)
+
+Example_1 = Solution()
+print(Example_1.twoSum(nums = [3,4,5,6], target = 7))
+
+Example_2 = Solution()
+print(Example_2.twoSum(nums = [4,5,6], target = 10))
+
+Example_3 = Solution()
+print(Example_3.twoSum(nums = [5,5], target = 10))
+    
+
+"""
+Examples:
+__________________________
+Example 1:
+
+Input: nums = [3,4,5,6], target = 7
+Output: [0, 1]
+----------
+
+Example 2:
+
+Input: nums = [4,5,6], target = 10
+Output: [0, 2]
+----------
+
+Example 3:
+
+Input: nums = [5,5], target = 10
+Output: [0, 1]
+
+"""

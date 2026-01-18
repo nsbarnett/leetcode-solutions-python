@@ -23,7 +23,15 @@ class Solution:
             return True
         
         return False
-    
+
+
+
+Example_1 = Solution()
+print(Example_1.isPalindrome(s = "Was it a car or a cat I saw?"))
+
+Example_2 = Solution()
+print(Example_2.isPalindrome(s = "tab a cat"))
+
 
 """
 Examples:

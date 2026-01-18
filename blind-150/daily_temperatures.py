@@ -36,7 +36,13 @@ class Solution:
         return result
 
                 
-    
+ 
+Example_1 = Solution()
+print(Example_1.dailyTemperatures(temperatures = [30,38,30,36,35,40,28]))
+
+Example_2 = Solution()
+print(Example_2.dailyTemperatures(temperatures = [22,21,20]))
+
 
 """
 Examples:

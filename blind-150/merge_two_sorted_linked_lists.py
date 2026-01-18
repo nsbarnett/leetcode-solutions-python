@@ -46,6 +46,12 @@ class Solution:
 
         return head
     
+    
+""" Leetcode treats the test inputs as linked list instead of the provided arrays. In order to have a solution run
+    and provide the proper output, the test inputs would need to be constructed as linked list first run through the soltion.
+
+    For simplicity, this solution does not provide the extra step of creating the linked list to run outside of leetcode.
+"""   
 
 """
 Examples:

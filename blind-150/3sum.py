@@ -26,6 +26,16 @@ class Solution:
         return trips
     
 
+Example_1 = Solution()
+print(Example_1.threeSum(nums = [-1,0,1,2,-1,-4]))
+
+Example_2 = Solution()
+print(Example_2.threeSum(nums = [0,1,1]))
+
+Example_3 = Solution()
+print(Example_3.threeSum(nums = [0,0,0]))
+    
+
 """
 Examples:
 __________________________

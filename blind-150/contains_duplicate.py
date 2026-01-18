@@ -24,11 +24,14 @@ class Solution:
         else:
             return False
 
+
+
 Example_1 = Solution()
 print(Example_1.hasDuplicate(nums = [1, 2, 3, 3]))
 
 Example_2 = Solution()
 print(Example_2.hasDuplicate(nums = [1, 2, 3, 4]))
+
 
 """
 Expected Outcome:
